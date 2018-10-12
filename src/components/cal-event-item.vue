@@ -1,8 +1,7 @@
 <template>
   <div class="wrapper">
-    <h3 class="title">{{index+1}}. {{event.title}}</h3>
-    <p class="time">{{dateTimeFormatter(Date.parse(new Date(event.date)),i18n[locale].fullFormat)}}</p>
-    <p class="desc">{{event.desc}}</p>
+    <h3 class="title">课程名称&nbsp;:{{event.title}}</h3>
+    <p class="title"> 课程时间&nbsp;:{{dateTimeFormatter(Date.parse(new Date(event.date)),i18n[locale].fullFormat)}}</p>
   </div>
 </template>
 <script>

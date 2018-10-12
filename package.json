@@ -13,6 +13,7 @@
   },
   "main": "dist/index.js",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "vue": "^2.1.8"
   },
   "devDependencies": {

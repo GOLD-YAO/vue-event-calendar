@@ -141,7 +141,7 @@ export default {
 }
 </script>
 <style lang="less">
-@base-orange: #f29543;
+@base-orange: #ccc;
 @white: #ffffff;
 @gray: #e0e0e0;
 @gray-dark: #b1b1b1;
@@ -176,15 +176,13 @@ export default {
   .__vev_calendar-wrapper{
     .cal-wrapper{
       width: 100%;
-      padding: 10px 5px;
       .date-num{
-        line-height: 42px;
+        line-height: 40px;
       }
     }
     .events-wrapper{
       width: 100%;
-      margin-top: 10px;
-      padding: 10px;
+    
     }
   }
 }
@@ -211,15 +209,13 @@ export default {
     .cal-header{
       position: relative;
       width: 100%;
-      background-color: @white;
-      // box-shadow: 0 6px 5px rgba(0,0,0,.1);
       font-weight: 500;
       overflow: hidden;
-      padding-bottom: 10px;
+      
       &>div{
         float: left;
         line-height: 20px;
-        padding: @large-padding;
+        padding: @small-padding;
       }
       .title{
         width: 60%;
@@ -247,10 +243,17 @@ export default {
         overflow: hidden;
         text-align: center;
         font-size: 1rem;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
         .item{
-          line-height: 50px;
+          line-height: 24px;
           float: left;
           width: 14.285%;
+          border-right: 1px solid ;
+          font-size: 14px;
+          &:last-child{
+            border-right: none;
+          }
         }
       }
       .dates{
@@ -264,6 +267,7 @@ export default {
           display: block;
           width: 14.285%;
           cursor: default;
+          border-bottom: 1px solid #ccc;
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
           .date-num{
             font-size: 1rem;
@@ -281,10 +285,12 @@ export default {
           .is-event{
             content: '';
             border: 1px solid @base-orange;
-            background-color: #fff;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
+            // background-color: #fff;
+            border-style: solid;
+            border-width: 0px 38px 38px 0px;
+            border-color: transparent #44b549  transparent  transparent !important;
+            width: 38px;
+            height: 38px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -315,8 +321,6 @@ export default {
     .cal-events{
       height: 95%;
       overflow-y: auto;
-      padding: 0 5px;
-      margin: 15px 0;
     }
     .date{
       max-width: 60%;
@@ -331,8 +335,7 @@ export default {
     .event-item{
       padding: 5px 20px;
       margin-top: 15px;
-      box-shadow: 0 3px 11px 2px rgba(0,0,0,.1);
-      background-color: #fff;
+      background-color: #efefef;
       border-radius: 5px;
       color: #323232;
       position: relative;
